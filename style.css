@@ -1,0 +1,191 @@
+/* Custom Colors */
+:root {
+    --pink: #ffafbd;
+    --gold: #d4af37;
+    --white: #ffffff;
+    --dark-pink: #d81b60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+    background-attachment: fixed;
+    color: #444;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Logic */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #fff5f7;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden { display: none !important; }
+
+/* Password Screen */
+#passwordInput {
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid var(--pink);
+    outline: none;
+    margin-top: 15px;
+    width: 80%;
+    text-align: center;
+}
+
+button {
+    background: var(--pink);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover { transform: scale(1.05); background: var(--dark-pink); }
+
+.shake { animation: shake 0.4s; }
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Intro Text */
+.intro-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--dark-pink);
+    text-align: center;
+    animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.1); }
+}
+
+/* Main Content */
+.main-title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--dark-pink);
+    margin: 40px 0;
+}
+
+#timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-pink);
+    letter-spacing: 2px;
+}
+
+/* Chat Styling */
+.chat-container {
+    height: 400px;
+    overflow-y: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg {
+    background: var(--white);
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 8px 0;
+    max-width: 85%;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    animation: slideUp 0.5s ease;
+    border-left: 4px solid var(--pink);
+}
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Photo Slider */
+.slider {
+    width: 90%;
+    max-width: 400px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slideImages 10s infinite;
+}
+
+.slides img { width: 100%; object-fit: cover; }
+
+@keyframes slideImages {
+    0%, 30% { transform: translateX(0); }
+    33%, 63% { transform: translateX(-33.33%); }
+    66%, 100% { transform: translateX(-66.66%); }
+}
+
+/* Horizontal Cards */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar { display: none; }
+
+.card {
+    min-width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border-bottom: 5px solid var(--gold);
+}
+
+.card:hover { transform: translateY(-10px); }
+
+/* Floating Music Button */
+.music-fab {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.section-title { text-align: center; color: var(--dark-pink); margin-bottom: 10px; }

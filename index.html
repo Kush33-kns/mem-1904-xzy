@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Princy 💗</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bgMusic" src="music.mp3" loop></audio>
+
+    <div id="password-screen" class="overlay">
+        <div class="glass-card login-box" id="login-box">
+            <h2 style="color: #d81b60;">Secret Access ✨</h2>
+            <p>Enter the nickname to enter:</p>
+            <input type="password" id="passwordInput" placeholder="Password...">
+            <br>
+            <button onclick="checkPassword()">Open Magic 🌸</button>
+            <p id="error-msg" class="hidden">Wrong Password! Try again 🤫</p>
+        </div>
+    </div>
+
+    <div id="intro-screen" class="overlay hidden">
+        <div class="intro-container">
+            <h1 class="intro-text" id="intro-line"></h1>
+        </div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        
+        <header>
+            <button id="musicBtn" class="music-fab" onclick="toggleMusic()">🎵 Play Music</button>
+            <h1 class="main-title">Happy Birthday Princy! 🎂</h1>
+        </header>
+
+        <section class="section">
+            <div class="glass-card">
+                <h3>Countdown to April 19 ⏳</h3>
+                <div id="timer">00d 00h 00m 00s</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">A Story About Us 📖</h2>
+            <div id="chat-box" class="glass-card chat-container">
+                </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Memories 📸</h2>
+            <div class="slider">
+                <div class="slides">
+                    <img src="images/photo1.jpg" alt="Memory 1">
+                    <img src="images/photo2.jpg" alt="Memory 2">
+                    <img src="images/photo3.jpg" alt="Memory 3">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Special Qualities ✨</h2>
+            <div class="horizontal-scroll">
+                <div class="card shadow">
+                    <h3>Cute Egoist 😎</h3>
+                    <p>Thodi egoist che pan heart thi khub j cute che!</p>
+                </div>
+                <div class="card shadow">
+                    <h3>Dangerous Eyes 👀</h3>
+                    <p>Tari eyes khub j dangerous ane dimples hayeee...</p>
+                </div>
+                <div class="card shadow">
+                    <h3>Best Friend 🤞</h3>
+                    <p>7th ma strangers, 10th ma best friends forever.</p>
+                </div>
+                <div class="card shadow">
+                    <h3>Chiku 🍫</h3>
+                    <p>Dairy milk rejection story is still legendary!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-bottom: 50px;">
+            <button class="surprise-btn" onclick="showSurprise()">Click for Surprise! 🎁</button>
+            <div id="final-msg" class="glass-card hidden message-popup">
+                <p>Tu mari life ma khub j important che. Always be the way you are. Happy Birthday Medam Ji! ❤️</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
